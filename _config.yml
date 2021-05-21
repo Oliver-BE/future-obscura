@@ -29,7 +29,7 @@ social:
   # Your email address.
   email: "obaldwinedwards21@amherst.edu"
   # link to the project PDF
-  project_pdf: "report.pdf"
+  project_pdf: ""
 
 ## Gallery Configuration ##
 # If you modify this, also modify the `default.scope.path` key below.
