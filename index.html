@@ -35,7 +35,7 @@ layout: default
 
   <!-- Thumbnail -->
   <section id="thumbnails">
-    {% assign gallery = site.static_files | where: "image", true %}
+    <!-- assign gallery = site.static_files | where: "image", true  -->
     <!-- for image in gallery -->
     {% for photo in site.photos %} 
       <article>
@@ -43,8 +43,8 @@ layout: default
         <a class="thumbnail" href="gallery/{{ photo.image }}" data-position="left center"><img src="gallery/{{ photo.thumbnail }}" alt=""/></a>
         <!-- <a class="thumbnail" href="gallery/background_01.jpg" data-position="left center"><img src="gallery/background_01.jpg" alt=""/></a> -->
         <!-- <h2>{{ photo.basename | replace: "_", " " }}</h2> -->
-        <h2>{{ photo.title }}</h2> 
-        <p>{{ photo.caption }}</p>
+        <!-- <h2>{{ photo.title }}</h2> 
+        <p>{{ photo.caption }}</p> -->
       </article>
     {% endfor %}
   </section>
