@@ -1,8 +1,10 @@
+url: https://oliver-be.ml/jekyll-lens/
+baseurl: 
 ## Site Meta ##
 # The title of the website.
-title: "Lens - Elastic Designs"
+title: "TODO: Title"
 # The description of the website
-description: "A Jekyll theme for photographers and photo bloggers."
+description: "TODO: description Jekyll theme for photographers and photo bloggers."
 # Keywords/tags for you site.
 keywords: "lens, jeykll-lens, jekyll, theme, jekyll-theme, photography, blog, photography-blog, photo-blog"
 # Your copyright message.
@@ -10,22 +12,24 @@ copyright: "Copyright &copy; 2021 - Oliver Baldwin Edwards"
 
 ## Site Configurations ##
 # 1st heading of the site.
-header: "Lens"
+header: "Title of Project"
 # 2nd heading/sub heading of the website.
 subheader: "Oliver Baldwin Edwards"
 # A description/bio of the website.
-bio: "A Jekyll theme for photographers and photo bloggers."
+bio: "TODO: A Jekyll theme for photographers and photo bloggers."
 social:
   # Your Twitter username.
   twitter_username: ""
   # Your Facebook username.
   facebook_username: ""
-  # Your Instagram username.
+  # Your Instagram username.s
   instagram_username: ""
   # GitHub username.
-  github_username: "Oliver-BE"
+  github_username: ""
   # Your email address.
   email: "obaldwinedwards21@amherst.edu"
+  # link to the project PDF
+  project_pdf: "report.pdf"
 
 ## Gallery Configuration ##
 # If you modify this, also modify the `default.scope.path` key below.
@@ -40,3 +44,7 @@ defaults:
     path: "gallery"
    values:
     image: true
+
+# set up the _photos collection
+collections:
+  photos:

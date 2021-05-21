@@ -11,6 +11,9 @@ layout: default
     <p>{{ site.bio }}</p>
     {% if site.social %}
       <ul class="icons">
+        {% if site.social.project_pdf and site.social.project_pdf != "" %}
+        <li><a href="{{ site.social.project_pdf }}" class="icon fa-book"><span class="label">Project</span></a></li>
+        {% endif %}
         {% if site.social.twitter_username and site.social.twitter_username != "" %}
           <li><a href="https://twitter.com/{{ site.social.twitter_username }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
         {% endif %}
@@ -21,7 +24,7 @@ layout: default
           <li><a href="https://instagram.com/{{ site.social.instagram_username }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
         {% endif %}
         {% if site.social.github_username and site.social.github_username != "" %}
-          <li><a href="https://github.com/{{ site.social.github_username }}" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://github.com/{{ site.social.github_username }}" class="icon fa-github"><span class="label">GitHub</span></a></li>
         {% endif %}
         {% if site.social.email and site.social.email != "" %}
           <li><a href="mailto:{{ site.social.email }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
@@ -33,10 +36,15 @@ layout: default
   <!-- Thumbnail -->
   <section id="thumbnails">
     {% assign gallery = site.static_files | where: "image", true %}
-    {% for image in gallery %}
+    <!-- for image in gallery -->
+    {% for photo in site.photos %} 
       <article>
-        <a class="thumbnail" href="{{ site.gallery_dir }}/{{ image.name }}" data-position="{{ site.thumbnail_position }}"><img src="{{ site.gallery_dir }}/{{ image.name }}" alt="{{ image.basename }}" /></a>
-        <h2>{{ image.basename | replace: "_", " " }}</h2>
+        <!-- <a class="thumbnail" href="{{ site.gallery_dir }}/{{ image.name }}" data-position="{{ site.thumbnail_position }}"><img src="{{ site.gallery_dir }}/{{ image.name }}" alt="{{ image.basename }}" /></a> -->
+        <a class="thumbnail" href="gallery/{{ photo.image }}" data-position="left center"><img src="gallery/{{ photo.thumbnail }}" alt=""/></a>
+        <!-- <a class="thumbnail" href="gallery/background_01.jpg" data-position="left center"><img src="gallery/background_01.jpg" alt=""/></a> -->
+        <!-- <h2>{{ photo.basename | replace: "_", " " }}</h2> -->
+        <h2>{{ photo.title }}</h2> 
+        <p>{{ photo.caption }}</p>
       </article>
     {% endfor %}
   </section>
