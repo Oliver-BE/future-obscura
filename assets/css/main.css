@@ -1098,7 +1098,8 @@
 			}
 
 				#viewer .slide .caption h2, #viewer .slide .caption h3, #viewer .slide .caption h4, #viewer .slide .caption h5, #viewer .slide .caption h6 {
-					color: #fff; 
+					color: #fff;
+					/* opacity: 0; */
 				}
 
 			#viewer .slide .image {
@@ -1109,8 +1110,8 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100%;
 				height: 100%;
+				width: 100%;
 				background-repeat: no-repeat;
 				background-size: contain;
 				opacity: 0;
